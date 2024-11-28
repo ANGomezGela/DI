@@ -8,6 +8,7 @@ function kalkulatuGMI() {
     let GMI = pisua / (altuera^2);
 
     let sailkapena = "";
+    //if bat egiten dugu jakiteko sailkapena
     if (GMI < 18.5) {
       sailkapena = "Baxua";
     } else if (18.5 < GMI && GMI< 24.9) {
