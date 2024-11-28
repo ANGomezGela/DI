@@ -1,22 +1,12 @@
-function kalkulatuGMI() {
+function kalkulatuDeskontua() {
     // Hartzen ditugu input-aren balioa eta gordetzen duguu let aldagaiean, 
     // parseFloat erabiltzen dugu, zenbakia decimal batean gordetzeko, ez dutenean ezer idazten defektuko balioa 0 izango da.
-    let pisua = parseFloat(document.getElementById("pisua").value) || 0;
-    let altuera = parseFloat(document.getElementById("altuera").value) || 0;
+    let jatorria = parseFloat(document.getElementById("jatorria").value) || 0;
+    let deskontua = parseFloat(document.getElementById("deskontua").value) || 0;
   
-    // Aldagai berri bat sortzen dugu eta kalkulatzen dugu guztizko kostua
-    let GMI = (pisua / altuera)^2;
+    // Aldagai berri bat sortzen dugu eta kalkulatzen dugu dekontua
+    let prezioa = jatorria * ((100 - deskontua)/100);
 
-    let sailkapena = "";
-    if (GMI < 18.5) {
-      sailkapena = "Baxua";
-    } else if (18.5 < GMI < 24.9) {
-      sailkapena = "Normala";
-    } else if (24.9 < GMI < 29.9){
-      sailkapena = "Altua";
-    } else {
-      sailkapena = "Obesitatea";
-    }
-    // Bilatzen dugu id buruz h2 idazteko guztizko kostua innerText-ekin
-    document.getElementById("emaitza").innerText = "GMI " + GMI + " \nSalikapena: " + sailkapena;
+    // Bilatzen dugu id buruz h2 idazteko
+    document.getElementById("emaitza").innerText = "Produktuaren azken prezioa %" + deskontua + "ko deskontua aplikatu ondoren " + prezioa + " eurokoa da.";
 }

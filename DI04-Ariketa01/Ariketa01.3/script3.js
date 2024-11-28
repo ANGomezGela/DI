@@ -17,6 +17,6 @@ function kalkulatuGMI() {
     } else {
       sailkapena = "Obesitatea";
     }
-    // Bilatzen dugu id buruz h2 idazteko guztizko kostua innerText-ekin
+    // Bilatzen dugu id buruz h2 idazteko
     document.getElementById("emaitza").innerText = "GMI " + GMI + " \nSalikapena: " + sailkapena;
 }
